@@ -51,9 +51,8 @@ node default {
   mode    => '0644',
   content => "Interesting class, still would like to know why this is called Puppet.\n",
 }
-  exec { 'execute':
+  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
   path => '/user/bin',
-  creates => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
   }
   
   host { 'testing.puppetlabs.vm':
