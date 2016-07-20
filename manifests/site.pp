@@ -51,4 +51,8 @@ node default {
   mode    => '0644',
   content => "Interesting class, still would like to know why this is called Puppet.\n",
 }
+  host { 'testing.puppetlabs.vm':
+  ensure => present,
+  ip => 127.0.0.1
+  }
 }
