@@ -67,4 +67,8 @@ node default {
   }
   
   include users
+  
+  $foo = hiera('message')
+  
+  notify { $foo: }
 }
